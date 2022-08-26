@@ -1,0 +1,17 @@
+D:\ClintonManagementApp\ClintonManagementApp\bin\Debug\ClintonManagementApp.exe.config
+D:\ClintonManagementApp\ClintonManagementApp\bin\Debug\ClintonManagementApp.exe
+D:\ClintonManagementApp\ClintonManagementApp\bin\Debug\ClintonManagementApp.pdb
+D:\ClintonManagementApp\ClintonManagementApp\obj\Debug\ClintonManagementApp.csproj.AssemblyReference.cache
+D:\ClintonManagementApp\ClintonManagementApp\obj\Debug\ClintonManagementApp.csproj.SuggestedBindingRedirects.cache
+D:\ClintonManagementApp\ClintonManagementApp\obj\Debug\ClintonManagementApp.login.resources
+D:\ClintonManagementApp\ClintonManagementApp\obj\Debug\ClintonManagementApp.Properties.Resources.resources
+D:\ClintonManagementApp\ClintonManagementApp\obj\Debug\ClintonManagementApp.csproj.GenerateResource.cache
+D:\ClintonManagementApp\ClintonManagementApp\obj\Debug\ClintonManagementApp.csproj.CoreCompileInputs.cache
+D:\ClintonManagementApp\ClintonManagementApp\obj\Debug\ClintonManagementApp.exe
+D:\ClintonManagementApp\ClintonManagementApp\obj\Debug\ClintonManagementApp.pdb
+D:\ClintonManagementApp\ClintonManagementApp\obj\Debug\ClintonManagementApp.CustomerButton.resources
+D:\ClintonManagementApp\ClintonManagementApp\obj\Debug\ClintonManagementApp.MainBackground.resources
+D:\ClintonManagementApp\ClintonManagementApp\obj\Debug\ClintonManagementApp.UserForm.resources
+D:\ClintonManagementApp\ClintonManagementApp\obj\Debug\ClintonManagementApp.UserModuleForm.resources
+D:\ClintonManagementApp\ClintonManagementApp\obj\Debug\ClintonManagementApp.CustomerForm.resources
+D:\ClintonManagementApp\ClintonManagementApp\obj\Debug\ClintonManagementApp.CustomerModuleForm.resources
