@@ -41,7 +41,7 @@ namespace ClintonManagementApp
 
         private void customerButton1_Click(object sender, EventArgs e)
         {
-
+            openChildForm( new ProductForm());
         }
 
         private void label5_Click(object sender, EventArgs e)
@@ -57,6 +57,11 @@ namespace ClintonManagementApp
         private void btnCustomer_Click(object sender, EventArgs e)
         {
             openChildForm(new CustomerForm());
+        }
+
+        private void btnCategories_Click(object sender, EventArgs e)
+        {
+            openChildForm(new categoriesForm());
         }
     }
 }

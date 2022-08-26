@@ -15,3 +15,7 @@ D:\ClintonManagementApp\ClintonManagementApp\obj\Debug\ClintonManagementApp.User
 D:\ClintonManagementApp\ClintonManagementApp\obj\Debug\ClintonManagementApp.UserModuleForm.resources
 D:\ClintonManagementApp\ClintonManagementApp\obj\Debug\ClintonManagementApp.CustomerForm.resources
 D:\ClintonManagementApp\ClintonManagementApp\obj\Debug\ClintonManagementApp.CustomerModuleForm.resources
+D:\ClintonManagementApp\ClintonManagementApp\obj\Debug\ClintonManagementApp.categoriesForm.resources
+D:\ClintonManagementApp\ClintonManagementApp\obj\Debug\ClintonManagementApp.CategoryModule.resources
+D:\ClintonManagementApp\ClintonManagementApp\obj\Debug\ClintonManagementApp.ProductForm.resources
+D:\ClintonManagementApp\ClintonManagementApp\obj\Debug\ClintonManagementApp.ProductModule.resources

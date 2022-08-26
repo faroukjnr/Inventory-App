@@ -12,11 +12,11 @@ using System.Data.SqlClient;
 namespace ClintonManagementApp
 {
     public partial class CustomerModuleForm : Form
-       
+
     {
         SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=""C:\Users\USER\Documents\clinton dbms.mdf"";Integrated Security=True;Connect Timeout=30");
         SqlCommand cm = new SqlCommand();
-        
+
 
         public CustomerModuleForm()
         {
@@ -27,13 +27,13 @@ namespace ClintonManagementApp
         {
             try
             {
-               
-               
+
+
                 if (MessageBox.Show("Are you sure you want to save this Customer?", "Saving Record", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                     cm = new SqlCommand("INSERT INTO tbCustomer(Cname,CPhone)VALUES(@Cname,@Cphone)", con);
                 cm.Parameters.AddWithValue("@CName", txtCName.Text);
-               
-               cm.Parameters.AddWithValue("@Cphone", txtCphone.Text);
+
+                cm.Parameters.AddWithValue("@Cphone", txtCphone.Text);
                 con.Open();
                 cm.ExecuteNonQuery();
                 con.Close();
@@ -49,7 +49,7 @@ namespace ClintonManagementApp
         {
             txtCName.Clear();
             txtCphone.Clear();
-            
+
         }
 
         private void btnClear_Click(object sender, EventArgs e)
@@ -62,6 +62,27 @@ namespace ClintonManagementApp
         private void label6_Click(object sender, EventArgs e)
         {
             this.Dispose();
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (MessageBox.Show("Are you sure you want to update this Customer?", "update Record", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    cm = new SqlCommand("UPDATE tbCustomer SET  CName=@Cname, CPhone=@Cphone WHERE Cd LIKE '" + label4.Text + "'", con);
+                cm.Parameters.AddWithValue("@Cname", txtCName.Text);
+
+                cm.Parameters.AddWithValue("@Cphone", txtCphone.Text);
+                con.Open();
+                cm.ExecuteNonQuery();
+                con.Close();
+                MessageBox.Show("Customer has been updated  successfully");
+                this.Dispose();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }

@@ -82,7 +82,7 @@ namespace ClintonManagementApp
                     return;
                 }
                 if (MessageBox.Show("Are you sure youu want to update this user?", "update Record", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-                    cm = new SqlCommand("UPDATE tbUser SET  FullName=@FullName, Password=@Password, Phone=@Phone WHERE UserName LIKE '" + txtUserName.Text + "'", con);
+                cm = new SqlCommand("UPDATE tbUser SET  FullName=@FullName, Password=@Password, Phone=@Phone WHERE UserName LIKE '" + txtUserName.Text + "'", con);
                 cm.Parameters.AddWithValue("@FullName", txtFullName.Text);
                 cm.Parameters.AddWithValue("@Password", txtPass.Text);
                 cm.Parameters.AddWithValue("@Phone", txtPhone.Text);

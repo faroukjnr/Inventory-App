@@ -58,7 +58,7 @@ namespace ClintonManagementApp
             }
             else if(colName =="delete")
             {
-                if(MessageBox.Show("Are you sure u want to delete this user","Delete Record",MessageBoxButtons.YesNo,MessageBoxIcon.Question) == DialogResult.Yes)
+                if(MessageBox.Show("Are you sure you want to delete this user","Delete Record",MessageBoxButtons.YesNo,MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     con.Open();
                     cm = new SqlCommand("DELETE FROM tbUser WHERE UserName LIKE '" + dgvUser.Rows[e.RowIndex].Cells[1].Value.ToString() + "'", con);
