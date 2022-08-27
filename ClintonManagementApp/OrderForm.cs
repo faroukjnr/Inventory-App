@@ -19,8 +19,14 @@ namespace ClintonManagementApp
 
         private void customerbtn_Click(object sender, EventArgs e)
         {
-            OrderModuleForm moduleForm = new OrderModuleForm();
-            moduleForm.ShowDialog();
+            OrderModuleForm ModuleForm = new OrderModuleForm();
+            ModuleForm.ShowDialog();
+            
+        }
+
+        private void dgvOrder_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
