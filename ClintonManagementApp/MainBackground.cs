@@ -63,5 +63,10 @@ namespace ClintonManagementApp
         {
             openChildForm(new categoriesForm());
         }
+
+        private void btnOrder_Click(object sender, EventArgs e)
+        {
+            openChildForm(new OrderForm());
+        }
     }
 }

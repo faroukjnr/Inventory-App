@@ -20,12 +20,12 @@ namespace ClintonManagementApp
         public ProductModule()
         {
             InitializeComponent();
-            loadCategory();
+            loadProduct();
         }
-        public void loadCategory()
+        public void loadProduct()
         {
             comboBox1.Items.Clear();
-            cm = new SqlCommand("SELECT Catname FROM tbCategory", con);
+            cm = new SqlCommand("SELECT pname FROM tbProduct", con);
             con.Open();
             dr = cm.ExecuteReader();
             while(dr.Read())

@@ -21,6 +21,7 @@ namespace ClintonManagementApp
     public CustomerForm()
     {
         InitializeComponent();
+            loadCustomer();
     }
     public void loadCustomer()
     {

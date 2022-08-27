@@ -16,5 +16,11 @@ namespace ClintonManagementApp
         {
             InitializeComponent();
         }
+
+        private void customerbtn_Click(object sender, EventArgs e)
+        {
+            OrderModuleForm moduleForm = new OrderModuleForm();
+            moduleForm.ShowDialog();
+        }
     }
 }

@@ -19,3 +19,5 @@ D:\ClintonManagementApp\ClintonManagementApp\obj\Debug\ClintonManagementApp.cate
 D:\ClintonManagementApp\ClintonManagementApp\obj\Debug\ClintonManagementApp.CategoryModule.resources
 D:\ClintonManagementApp\ClintonManagementApp\obj\Debug\ClintonManagementApp.ProductForm.resources
 D:\ClintonManagementApp\ClintonManagementApp\obj\Debug\ClintonManagementApp.ProductModule.resources
+D:\ClintonManagementApp\ClintonManagementApp\obj\Debug\ClintonManagementApp.OrderForm.resources
+D:\ClintonManagementApp\ClintonManagementApp\obj\Debug\ClintonManagementApp.OrderModuleForm.resources
