@@ -33,6 +33,9 @@
             this.dgvOrder = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.customerbtn = new ClintonManagementApp.CustomerButton();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -41,11 +44,7 @@
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.customerbtn = new ClintonManagementApp.CustomerButton();
             this.delete = new System.Windows.Forms.DataGridViewImageColumn();
-            this.edit = new System.Windows.Forms.DataGridViewImageColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOrder)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.customerbtn)).BeginInit();
@@ -74,12 +73,12 @@
             this.Column6,
             this.Column7,
             this.Column8,
-            this.delete,
-            this.edit});
+            this.delete});
             this.dgvOrder.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvOrder.EnableHeadersVisualStyles = false;
             this.dgvOrder.Location = new System.Drawing.Point(0, 0);
             this.dgvOrder.Name = "dgvOrder";
+            this.dgvOrder.RowHeadersVisible = false;
             this.dgvOrder.Size = new System.Drawing.Size(800, 450);
             this.dgvOrder.TabIndex = 2;
             this.dgvOrder.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvOrder_CellContentClick);
@@ -104,6 +103,31 @@
             this.label1.Size = new System.Drawing.Size(123, 20);
             this.label1.TabIndex = 0;
             this.label1.Text = "Manage Order";
+            // 
+            // dataGridViewImageColumn1
+            // 
+            this.dataGridViewImageColumn1.HeaderText = "delete";
+            this.dataGridViewImageColumn1.Image = ((System.Drawing.Image)(resources.GetObject("dataGridViewImageColumn1.Image")));
+            this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
+            // 
+            // dataGridViewImageColumn2
+            // 
+            this.dataGridViewImageColumn2.HeaderText = "edit";
+            this.dataGridViewImageColumn2.Image = ((System.Drawing.Image)(resources.GetObject("dataGridViewImageColumn2.Image")));
+            this.dataGridViewImageColumn2.Name = "dataGridViewImageColumn2";
+            // 
+            // customerbtn
+            // 
+            this.customerbtn.Image = ((System.Drawing.Image)(resources.GetObject("customerbtn.Image")));
+            this.customerbtn.ImageHover = ((System.Drawing.Image)(resources.GetObject("customerbtn.ImageHover")));
+            this.customerbtn.ImageNormal = ((System.Drawing.Image)(resources.GetObject("customerbtn.ImageNormal")));
+            this.customerbtn.Location = new System.Drawing.Point(753, 0);
+            this.customerbtn.Name = "customerbtn";
+            this.customerbtn.Size = new System.Drawing.Size(44, 32);
+            this.customerbtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.customerbtn.TabIndex = 5;
+            this.customerbtn.TabStop = false;
+            this.customerbtn.Click += new System.EventHandler(this.customerbtn_Click);
             // 
             // Column5
             // 
@@ -160,42 +184,11 @@
             this.Column8.HeaderText = "Total Amount";
             this.Column8.Name = "Column8";
             // 
-            // dataGridViewImageColumn1
-            // 
-            this.dataGridViewImageColumn1.HeaderText = "delete";
-            this.dataGridViewImageColumn1.Image = ((System.Drawing.Image)(resources.GetObject("dataGridViewImageColumn1.Image")));
-            this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
-            // 
-            // dataGridViewImageColumn2
-            // 
-            this.dataGridViewImageColumn2.HeaderText = "edit";
-            this.dataGridViewImageColumn2.Image = ((System.Drawing.Image)(resources.GetObject("dataGridViewImageColumn2.Image")));
-            this.dataGridViewImageColumn2.Name = "dataGridViewImageColumn2";
-            // 
-            // customerbtn
-            // 
-            this.customerbtn.Image = ((System.Drawing.Image)(resources.GetObject("customerbtn.Image")));
-            this.customerbtn.ImageHover = ((System.Drawing.Image)(resources.GetObject("customerbtn.ImageHover")));
-            this.customerbtn.ImageNormal = ((System.Drawing.Image)(resources.GetObject("customerbtn.ImageNormal")));
-            this.customerbtn.Location = new System.Drawing.Point(753, 0);
-            this.customerbtn.Name = "customerbtn";
-            this.customerbtn.Size = new System.Drawing.Size(44, 32);
-            this.customerbtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.customerbtn.TabIndex = 5;
-            this.customerbtn.TabStop = false;
-            this.customerbtn.Click += new System.EventHandler(this.customerbtn_Click);
-            // 
             // delete
             // 
             this.delete.HeaderText = "delete";
             this.delete.Image = ((System.Drawing.Image)(resources.GetObject("delete.Image")));
             this.delete.Name = "delete";
-            // 
-            // edit
-            // 
-            this.edit.HeaderText = "edit";
-            this.edit.Image = ((System.Drawing.Image)(resources.GetObject("edit.Image")));
-            this.edit.Name = "edit";
             // 
             // OrderForm
             // 
@@ -232,6 +225,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
         private System.Windows.Forms.DataGridViewImageColumn delete;
-        private System.Windows.Forms.DataGridViewImageColumn edit;
     }
 }

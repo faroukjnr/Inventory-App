@@ -31,8 +31,8 @@ namespace ClintonManagementApp
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(OrderModuleForm));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -51,12 +51,11 @@ namespace ClintonManagementApp
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.btnSave = new System.Windows.Forms.Button();
-            this.btnUpdate = new System.Windows.Forms.Button();
+            this.UDqty = new System.Windows.Forms.NumericUpDown();
+            this.btnInsert = new System.Windows.Forms.Button();
             this.btnClear = new System.Windows.Forms.Button();
             this.label14 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dtorder = new System.Windows.Forms.DateTimePicker();
             this.label13 = new System.Windows.Forms.Label();
             this.txtPName = new System.Windows.Forms.TextBox();
             this.txtTotal = new System.Windows.Forms.TextBox();
@@ -77,11 +76,12 @@ namespace ClintonManagementApp
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Description = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lblOid = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCustomer)).BeginInit();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.UDqty)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProduct)).BeginInit();
             this.SuspendLayout();
             // 
@@ -131,6 +131,7 @@ namespace ClintonManagementApp
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.lblOid);
             this.panel2.Controls.Add(this.label8);
             this.panel2.Controls.Add(this.txtCName);
             this.panel2.Controls.Add(this.label7);
@@ -162,6 +163,7 @@ namespace ClintonManagementApp
             this.txtCName.Name = "txtCName";
             this.txtCName.Size = new System.Drawing.Size(193, 20);
             this.txtCName.TabIndex = 10;
+            this.txtCName.Visible = false;
             // 
             // label7
             // 
@@ -212,14 +214,14 @@ namespace ClintonManagementApp
             // 
             this.dgvCustomer.AllowUserToAddRows = false;
             this.dgvCustomer.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Red;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvCustomer.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.Red;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvCustomer.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvCustomer.ColumnHeadersHeight = 30;
             this.dgvCustomer.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvCustomer.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -258,12 +260,11 @@ namespace ClintonManagementApp
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.numericUpDown1);
-            this.panel3.Controls.Add(this.btnSave);
-            this.panel3.Controls.Add(this.btnUpdate);
+            this.panel3.Controls.Add(this.UDqty);
+            this.panel3.Controls.Add(this.btnInsert);
             this.panel3.Controls.Add(this.btnClear);
             this.panel3.Controls.Add(this.label14);
-            this.panel3.Controls.Add(this.dateTimePicker1);
+            this.panel3.Controls.Add(this.dtorder);
             this.panel3.Controls.Add(this.label13);
             this.panel3.Controls.Add(this.txtPName);
             this.panel3.Controls.Add(this.txtTotal);
@@ -284,51 +285,42 @@ namespace ClintonManagementApp
             this.panel3.TabIndex = 3;
             this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
-            // numericUpDown1
+            // UDqty
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(250, 290);
-            this.numericUpDown1.Maximum = new decimal(new int[] {
+            this.UDqty.Location = new System.Drawing.Point(250, 290);
+            this.UDqty.Maximum = new decimal(new int[] {
             1000,
             0,
             0,
             0});
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(132, 20);
-            this.numericUpDown1.TabIndex = 24;
-            this.numericUpDown1.ValueChanged += new System.EventHandler(this.numericUpDown1_ValueChanged);
+            this.UDqty.Name = "UDqty";
+            this.UDqty.Size = new System.Drawing.Size(132, 20);
+            this.UDqty.TabIndex = 24;
+            this.UDqty.ValueChanged += new System.EventHandler(this.numericUpDown1_ValueChanged);
             // 
-            // btnSave
+            // btnInsert
             // 
-            this.btnSave.BackColor = System.Drawing.Color.Red;
-            this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSave.Location = new System.Drawing.Point(5, 376);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(127, 33);
-            this.btnSave.TabIndex = 21;
-            this.btnSave.Text = "Order insert";
-            this.btnSave.UseVisualStyleBackColor = false;
-            // 
-            // btnUpdate
-            // 
-            this.btnUpdate.BackColor = System.Drawing.Color.Green;
-            this.btnUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUpdate.Location = new System.Drawing.Point(135, 376);
-            this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(137, 33);
-            this.btnUpdate.TabIndex = 23;
-            this.btnUpdate.Text = "Order Update";
-            this.btnUpdate.UseVisualStyleBackColor = false;
+            this.btnInsert.BackColor = System.Drawing.Color.Red;
+            this.btnInsert.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInsert.Location = new System.Drawing.Point(95, 376);
+            this.btnInsert.Name = "btnInsert";
+            this.btnInsert.Size = new System.Drawing.Size(127, 33);
+            this.btnInsert.TabIndex = 21;
+            this.btnInsert.Text = "Order insert";
+            this.btnInsert.UseVisualStyleBackColor = false;
+            this.btnInsert.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // btnClear
             // 
             this.btnClear.BackColor = System.Drawing.Color.Yellow;
             this.btnClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClear.Location = new System.Drawing.Point(278, 376);
+            this.btnClear.Location = new System.Drawing.Point(228, 376);
             this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(100, 33);
+            this.btnClear.Size = new System.Drawing.Size(150, 33);
             this.btnClear.TabIndex = 22;
             this.btnClear.Text = "CLEAR";
             this.btnClear.UseVisualStyleBackColor = false;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // label14
             // 
@@ -339,12 +331,14 @@ namespace ClintonManagementApp
             this.label14.TabIndex = 20;
             this.label14.Text = "Order Date";
             // 
-            // dateTimePicker1
+            // dtorder
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(2, 348);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(174, 20);
-            this.dateTimePicker1.TabIndex = 19;
+            this.dtorder.CustomFormat = "dd/mm/yyyy";
+            this.dtorder.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtorder.Location = new System.Drawing.Point(2, 348);
+            this.dtorder.Name = "dtorder";
+            this.dtorder.Size = new System.Drawing.Size(174, 20);
+            this.dtorder.TabIndex = 19;
             // 
             // label13
             // 
@@ -455,14 +449,14 @@ namespace ClintonManagementApp
             // 
             this.dgvProduct.AllowUserToAddRows = false;
             this.dgvProduct.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Red;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvProduct.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.Red;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvProduct.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.dgvProduct.ColumnHeadersHeight = 30;
             this.dgvProduct.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvProduct.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -530,6 +524,16 @@ namespace ClintonManagementApp
             this.Column6.Name = "Column6";
             this.Column6.Width = 82;
             // 
+            // lblOid
+            // 
+            this.lblOid.AutoSize = true;
+            this.lblOid.Location = new System.Drawing.Point(3, 376);
+            this.lblOid.Name = "lblOid";
+            this.lblOid.Size = new System.Drawing.Size(41, 13);
+            this.lblOid.TabIndex = 12;
+            this.lblOid.Text = "label15";
+            this.lblOid.Visible = false;
+            // 
             // OrderModuleForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -550,7 +554,7 @@ namespace ClintonManagementApp
             ((System.ComponentModel.ISupportInitialize)(this.dgvCustomer)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.UDqty)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProduct)).EndInit();
             this.ResumeLayout(false);
 
@@ -590,11 +594,8 @@ namespace ClintonManagementApp
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        public System.Windows.Forms.Button btnSave;
-        public System.Windows.Forms.Button btnUpdate;
+        public System.Windows.Forms.Button btnInsert;
         public System.Windows.Forms.Button btnClear;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
         public System.Windows.Forms.DataGridView dgvProduct;
         public System.Windows.Forms.TextBox txtCName;
         public System.Windows.Forms.TextBox txtCid;
@@ -603,5 +604,8 @@ namespace ClintonManagementApp
         public System.Windows.Forms.TextBox txtTotal;
         public System.Windows.Forms.TextBox txtPName;
         private DataGridViewCellEventHandler dgvCustomer_CellContentClick;
+        public DateTimePicker dtorder;
+        public Label lblOid;
+        public NumericUpDown UDqty;
     }
 }

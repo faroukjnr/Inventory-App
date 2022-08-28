@@ -44,19 +44,8 @@ namespace ClintonManagementApp
         private void dgvUser_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             string colName = dgvUser.Columns[e.ColumnIndex].Name;
-            if (colName == "edit")
-            {
-                UserModuleForm userModule= new UserModuleForm();
-                userModule.txtUserName.Text = dgvUser.Rows[e.RowIndex].Cells[1].Value.ToString();
-                userModule.txtFullName.Text = dgvUser.Rows[e.RowIndex].Cells[2].Value.ToString();
-                userModule.txtPass.Text = dgvUser.Rows[e.RowIndex].Cells[3].Value.ToString();
-                userModule.txtPhone.Text = dgvUser.Rows[e.RowIndex].Cells[4].Value.ToString();
-
-                userModule.btnSave.Enabled = false;
-                userModule.btnUpdate.Enabled = true;
-                userModule.ShowDialog();
-            }
-            else if(colName =="delete")
+           
+             if(colName =="delete")
             {
                 if(MessageBox.Show("Are you sure you want to delete this user","Delete Record",MessageBoxButtons.YesNo,MessageBoxIcon.Question) == DialogResult.Yes)
                 {
